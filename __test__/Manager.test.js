@@ -1,6 +1,6 @@
 // Import Manager file
 
-const Engineer = require("../lib/Manager");
+const Manager = require("../lib/Manager");
 
 test("Can get office number via getOfficeNumber" , () =>{
     const testValue = "officeNumber";

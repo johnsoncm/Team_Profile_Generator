@@ -1,7 +1,7 @@
 // Import Intern file
 
 const { test, expect } = require("@jest/globals");
-const Engineer = require("../lib/Intern");
+const Intern = require("../lib/Intern");
 
 test("Can get school via getSchool" , () =>{
     const testValue = "School";
