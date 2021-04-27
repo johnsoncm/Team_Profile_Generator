@@ -1,6 +1,6 @@
 // Import Employee file
 
-const { test, expect } = require("@jest/globals");
+// const { test, expect } = require("@jest/globals");
 const Employee = require("../lib/Employee");
 
 // Employee test needs to test for:
