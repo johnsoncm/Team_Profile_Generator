@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
+const objectMap = require('./src/page.template.js');
 
 //User prompts go here
 
@@ -10,7 +11,7 @@ const questions = [
         type: 'list',
         name: 'type',
         message: 'What would you like to build?',
-        choices: ['Manager' , 'Engineer' , 'Intern'],
+        choices: ['Manager', 'Engineer', 'Intern'],
     },
     {
         type: 'input',
@@ -41,6 +42,30 @@ const questions = [
 
 ]
 
-inquirer
-    .prompt(questions)
+function writeToFile() {
+
+
+
+    inquirer
+        .prompt(questions)
+        .then((data) => {
+            console.log("data" ,  data)
+            fs.writeFileSync('team.html', objectMap.renderHtml(data.type, data.name, data.title, data.id, data.email, data.office),
+                console.log("successfully generated html file!"),
+                (err) =>
+                    err ? console.log(err) :
+                    console.log('Successfully generated a html file')
     
+    
+                    
+        )});
+
+    }
+
+
+    function init() {
+        console.log("Answer the prompts to generate a team profile!")
+        writeToFile();
+    }
+
+    init();

@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/johnsoncm/Team_Profile_Generator#readme",
   "dependencies": {
-    "jest": "^26.6.3",
-    
-    
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
   }
 }
