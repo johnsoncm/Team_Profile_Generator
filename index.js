@@ -11,6 +11,12 @@ const Employee = require('./lib/Employee.js');
 
 const employees = [];
 
+
+function init(){
+    startHtml();
+    addMember();
+}
+
 function addMember(){
     inquirer.prompt([{
         message: "Enter team member's name",
@@ -38,7 +44,7 @@ function addMember(){
             roleInfo = "school name";
 
         }else{
-            roleInfo = "office phone number"
+            roleInfo = "officeNumber"
         }
         inquirer.prompt([{
             message: `Enter team member's ${roleInfo}`,
@@ -72,8 +78,62 @@ function addMember(){
     });
 }
 
-addMember();
 
+
+
+function startHtml(){
+    const html = `<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>My Team</title>
+        <style>
+        .header{
+            background-color: rgb(227, 98, 59);
+        }
+        
+        .header-text{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        
+        }
+        
+        #cards-align{
+            display: flex;
+            justify-content:center;
+           
+    
+        }
+    
+        .card{
+            margin: 10px;
+        }
+        </style>
+    
+    
+    </head>
+    
+    <body>
+      <!------Header goes here------>  
+    <div class="header">
+        <h1 class="header-text">
+            My Team
+        </h1>
+    </div>`
+    fs.writeFile("./dist/team.html" , html, function(err){
+        if (err) {
+            console.log(err);
+        }
+    });
+    console.log("start");
+}
 
 
 function addHtml(member){
@@ -157,8 +217,7 @@ function finishHtml(){
     console.log("end");
 }
 
-
-
+init();
 
 
 
