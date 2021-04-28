@@ -19,21 +19,21 @@ function init(){
 
 function addMember(){
     inquirer.prompt([{
-        message: "Enter team member's name",
+        message: "Enter team member's name:",
         name: "name"
     },
     {
         type: "list",
-        message: "select team member's role",
+        message: "select team member's role:",
         choices: ["Engineer", "Intern", "Manager"],
         name: "role"
     },
     {
-        message: "Enter team member's id",
+        message: "Enter team member's id:",
         name: "id"
     },
     {
-        message: "Enter team members emaiil address",
+        message: "Enter team members email address:",
         name: "email"
     }])
     .then(function({name, role, id, email}){
@@ -66,12 +66,12 @@ function addMember(){
                 newMember = new Manager (name, id, email, roleInfo);
             }
             employees.push(newMember);
-            addHtml(newMember)
+            addCardsHtml(newMember)
             .then(function(){
                 if(moreMembers === "yes"){
                     addMember();
                 }else {
-                    finishHtml();
+                    endHtml();
                 }
             });
         });
@@ -90,6 +90,7 @@ function startHtml(){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         <link rel="stylesheet" type="text/css" href="style.css" />
         <title>My Team</title>
         <style>
@@ -114,7 +115,22 @@ function startHtml(){
     
         .card{
             margin: 10px;
+            
         }
+
+        .card-body{
+            background-color:rgb(52, 235, 235)
+        }
+
+        .list-group-item{
+            padding: 15px;
+        }
+
+        .card-body{
+            text-align: center;
+        }
+
+
         </style>
     
     
@@ -136,21 +152,26 @@ function startHtml(){
 }
 
 
-function addHtml(member){
+function addCardsHtml(member){
     return new Promise(function(resolve, reject){
         const name = member.getName();
         const role = member.getRole();
         const email = member.getEmail();
         const id = member.getId();
         let data = "";
-        if (role === "Enngineer"){
+        if (role === "Engineer"){
             const github = member.getGithub();
             data = ` <div id="cards-align">
     
             <div class="card" style="width: 18rem;">
               <div class="card-body">
+         
                 <h5 class="card-title">${name}</h5>
                 <p class="card-text">Engineer</p>
+                <span>
+                <i class="fas fa-glasses"></i>
+                 </span>
+               
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
@@ -167,11 +188,14 @@ function addHtml(member){
               <div class="card-body">
                 <h5 class="card-title">${name}</h5>
                 <p class="card-text">Intern</p>
+                <span>
+                <i class="fas fa-graduation-cap"></i>
+                </span>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: ${email}</li>
-                <li class="list-group-item">School: ${school}}</li>
+                <li class="list-group-item">School: ${school}</li>
               </ul>
             </div>
             </div>`
@@ -183,11 +207,14 @@ function addHtml(member){
               <div class="card-body">
                 <h5 class="card-title">${name}</h5>
                 <p class="card-text">Manager</p>
+                <span>
+                <i class="fas fa-coffee"></i>
+                </span>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: ${email}</li>
-                <li class="list-group-item">Office Phone Number: ${officeNumber}</li>
+                <li class="list-group-item">Office Phone #: ${officeNumber}</li>
               </ul>
             </div>
             </div>`
@@ -203,7 +230,7 @@ function addHtml(member){
 }
 
 
-function finishHtml(){
+function endHtml(){
     const html = `</div>
     </div>
     <body>

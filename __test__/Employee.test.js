@@ -18,7 +18,7 @@ test("Can get name via getName" , () => {
 test("Gets id from getId", () => {
     const testValueId = 100
     const e = new Employee("id",testValueId)
-    expect(e.getId().toBe(testValueId));
+    expect(e.getId()).toBe(testValueId);
 })
 
 // Get email via getEmail
@@ -26,7 +26,7 @@ test("Gets id from getId", () => {
 test("Gets email from getEmail", () => {
     const testValue = "test@test.com"
     const e = new Employee("email", 1, testValue)
-    expect(e.getEmail().toBe(testValue));
+    expect(e.getEmail()).toBe(testValue);
 })
 
 // Get role
