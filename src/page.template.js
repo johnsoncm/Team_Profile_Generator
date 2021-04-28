@@ -5,142 +5,24 @@
 
 
 // !!! Get font awesome icons for each type of employee!!!////
-function renderHtml(type, name, title, id, email, office ) {
-return `<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>My Team</title>
-    <style>
-    .header{
-        background-color: rgb(227, 98, 59);
-    }
-    
-    .header-text{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    
-    }
-    
-    #cards-align{
-        display: flex;
-        justify-content:center;
-        flex-direction: row;
-        align-items: flex-start;
-      
-    
-     
-    }
-    </style>
-
-
-</head>
-
-<body>
-  <!------Header goes here------>  
-<div class="header">
-    <h1 class="header-text">
-        My Team
-    </h1>
-</div>
-
-<!-------Cards go here------->
-<div id="cards-align">
-
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${name}</h5>
-    <p class="card-text">${type}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${title}</li>
-    <li class="list-group-item">${id}</li>
-    <li class="list-group-item">${email}</li>
-    <li class="list-group-item">${office}</li>
-  </ul>
-</div>
-</div>
-<div id="cards-align">
-
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${name}</h5>
-    <p class="card-text">${type}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${title}</li>
-    <li class="list-group-item">${id}</li>
-    <li class="list-group-item">${email}</li>
-    <li class="list-group-item">${office}</li>
-  </ul>
-</div>
-</div>
-<div id="cards-align">
-
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${name}</h5>
-    <p class="card-text">${type}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${title}</li>
-    <li class="list-group-item">${id}</li>
-    <li class="list-group-item">${email}</li>
-    <li class="list-group-item">${office}</li>
-  </ul>
-</div>
-</div>
-<div id="cards-align">
-
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${name}</h5>
-    <p class="card-text">${type}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${title}</li>
-    <li class="list-group-item">${id}</li>
-    <li class="list-group-item">${email}</li>
-    <li class="list-group-item">${office}</li>
-  </ul>
-</div>
-</div>
-<div id="cards-align">
-
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${name}</h5>
-    <p class="card-text">${type}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${title}</li>
-    <li class="list-group-item">${id}</li>
-    <li class="list-group-item">${email}</li>
-    <li class="list-group-item">${office}</li>
-  </ul>
-</div>
-</div>
-
-
-</body>
-
-</html>`
+function renderManager(){
 
 }
 
- 
+function renderIntern(){
 
+}
+
+function renderEngineer(){
+
+}
 
 
 module.exports={
-    renderHtml, 
+    renderManager,
+    renderIntern,
+    renderEngineer, 
    
 };
 
