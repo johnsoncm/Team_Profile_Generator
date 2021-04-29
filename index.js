@@ -175,8 +175,8 @@ function addCardsHtml(member){
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${email}"></li>
-                <li class="list-group-item">Github: <a href="www.github.com/${github}"></li>
+                <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
+                <li class="list-group-item">Github: <a href="www.github.com/${github}">${github}</a></li>
               </ul>
             </div>
             </div>`
@@ -195,7 +195,7 @@ function addCardsHtml(member){
               <ul class="list-group list-group-flush">
               
               <li class="list-group-item">ID: ${id}</li>  
-              <li class="list-group-item">Email: <a href="mailto:${email}"</li>
+              <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
                 <li class="list-group-item">School: ${school}</li>
               </ul>
             </div>
@@ -214,7 +214,7 @@ function addCardsHtml(member){
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${email}"></li>
+                <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
                 <li class="list-group-item">Office Phone #: ${officeNumber}</li>
               </ul>
             </div>
