@@ -4,7 +4,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const objectMap = require('./src/page.template.js');
 const Intern = require('./lib/Intern.js')
-const newArray = [];
+// const newArray = [];
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Employee = require('./lib/Employee.js');
@@ -193,8 +193,9 @@ function addCardsHtml(member){
                 </span>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email: ${email}</li>
+              
+              <li class="list-group-item">ID: ${id}</li>  
+              <li class="list-group-item">Email: ${email}</li>
                 <li class="list-group-item">School: ${school}</li>
               </ul>
             </div>
