@@ -176,7 +176,7 @@ function addCardsHtml(member){
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
-                <li class="list-group-item">Github: <a href="www.github.com/${github}">${github}</a></li>
+                <li class="list-group-item">Github: <a href="https://www.github.com/${github}">${github}</a></li>
               </ul>
             </div>
             </div>`
