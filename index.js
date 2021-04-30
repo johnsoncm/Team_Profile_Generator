@@ -4,18 +4,20 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const objectMap = require('./src/page.template.js');
 const Intern = require('./lib/Intern.js')
-// const newArray = [];
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Employee = require('./lib/Employee.js');
 
 const employees = [];
 
+// Starts application
 
 function init(){
     startHtml();
     addMember();
 }
+
+//Prompts every role for the first 4 questions, and uses conditional statements to ask specific questions for each role
 
 function addMember(){
     inquirer.prompt([{
@@ -79,7 +81,7 @@ function addMember(){
 }
 
 
-
+// This function writes beginning html when the app is initialized
 
 function startHtml(){
     const html = `<!DOCTYPE html>
@@ -153,6 +155,7 @@ function startHtml(){
     console.log("start");
 }
 
+// This function adds each card based on which type of employee it is
 
 function addCardsHtml(member){
     return new Promise(function(resolve, reject){
@@ -232,6 +235,7 @@ function addCardsHtml(member){
     });
 }
 
+//This function writes the end of html
 
 function endHtml(){
     const html = `</div>
@@ -251,139 +255,3 @@ init();
 
 
 
-
-
-
-
-
-
-
-
-//User prompts go here
-
-// const mainQuestions = [
-//     {
-//         type: 'list',
-//         name: 'type',
-//         message: 'What would you like to build?',
-//         choices: ['Manager', 'Engineer', 'Intern', 'Build Team'],
-//     },
-//     {
-//         type: 'input',
-//         name: 'name',
-//         message: 'What is your name?',
-//     },
-
-//     {
-//         type: 'input',
-//         name: 'id',
-//         message: 'What is your employee id?',
-//     },
-//     {
-//         type: 'input',
-//         name: 'email',
-//         message: 'What is your email address?',
-//     },
-
-
-// ];
-
-// // ONLY MANAGER
-// const managerQuestion = [
-//         {
-//         type: 'input',
-//         name: 'office',
-//         message: 'What is your office number?',
-
-//     },
-// ];
-
-//     // //ONLY ENGINEER
-
-//     const engineerQuestion = [
-//         { type: 'input',
-//         name: 'github',
-//         message: 'What is your github profile name?',
-
-//         }
-//     ];
-   
-//         //ONLY INTERN
-//            const internQuestion = [
-//             {
-//                 type: 'input',
-//                 name: 'school',
-//                 message: 'What school do you attend?',
-//             }
-//         ];
-
-//         // READY TO BUILD TEAM
-
-//         const teamBuildQuestion = [
-//             {
-//                 type: 'list',
-//                 name: 'team',
-//                 message: 'Are you ready to build your team page?',
-//                 choices: ["Yes", "No"],
-//             }
-//         ];
-    
-
-
-
-// // function writeToFile() {
-// // }
-
-
-
-//     inquirer
-//         .prompt(mainQuestions)
-//         .then((data) => {
-//             if (data.type === "Intern"){
-//                 inquirer
-//                 .prompt(internQuestion)
-               
-//             } else if (data.type === "Manager"){
-//                 inquirer
-//                 .prompt(managerQuestion)
-//             } else if (data.type === "Engineer"){
-//                 inquirer
-//                 .prompt(engineerQuestion)
-//                 //this isn't quite how to do this for building the team page
-//             } else if (data.type === "Build Team")
-//             inquirer
-//             .prompt(teamBuildQuestion);
-//         });
-
-
- 
-//             //if data.type 
-//             //instead of data pass a newArray
-//             //renderHtml(newArray) change renderhtml to renderIntern and make a write to file with
-//             //each catagory
-//             //loop through render function
-//             // console.log("data" ,  data)
-//             // fs.writeFileSync('team.html', objectMap.renderHtml(data.type, data.name, data.title, data.id, data.email, data.office),
-//                 // console.log("successfully generated html file!"),
-//                 // (err) =>
-//                 //     err ? console.log(err) :
-//                 //     console.log('Successfully generated a html file')
-    
-    
-                    
-   
-
-// function internArray (data){
-//         if(data.type === "Intern"){
-//                 newArray.push(new Intern(data.name, data.id, data.email, data.school));
-//                 console.log("new array" , newArray);
-//         } else("error")
-//     }
-
-
-//     // function init() {
-//     //     console.log("Answer the prompts to generate a team profile!")
-//     //     writeToFile();
-//     // }
-
-//     // init();
