@@ -94,8 +94,15 @@ function startHtml(){
         <link rel="stylesheet" type="text/css" href="style.css" />
         <title>My Team</title>
         <style>
+
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
         .header{
             background-color: rgb(227, 98, 59);
+            width: 100%;
         }
         
         .header-text{
@@ -106,14 +113,7 @@ function startHtml(){
         
         }
         
-        #cards-align{
-            display: flex;
-            justify-content:center;
-           
-    
-        }
-    
-        .card{
+         .card{
             margin: 10px;
             
         }
@@ -130,6 +130,7 @@ function startHtml(){
             text-align: center;
         }
 
+        
 
         </style>
     
