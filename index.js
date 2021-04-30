@@ -44,7 +44,7 @@ function addMember(){
             roleInfo = "school name";
 
         }else{
-            roleInfo = "officeNumber"
+            roleInfo = "Office Number"
         }
         inquirer.prompt([{
             message: `Enter team member's ${roleInfo}`,
@@ -95,10 +95,11 @@ function startHtml(){
         <title>My Team</title>
         <style>
 
-        .body {
+        body {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            align-items: center;
         }
         .header{
             background-color: rgb(227, 98, 59);
@@ -177,7 +178,7 @@ function addCardsHtml(member){
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
-                <li class="list-group-item">Github: <a href="https://www.github.com/${github}">${github}</a></li>
+                <li class="list-group-item">Github: <a href="https://www.github.com/${github}" target="_blank">${github}</a></li>
               </ul>
             </div>
             </div>`

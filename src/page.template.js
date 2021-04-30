@@ -6,23 +6,23 @@
 
 // !!! Get font awesome icons for each type of employee!!!////
 
-function renderManager(){
+// function renderManager(){
 
-}
+// }
 
-function renderIntern(){
+// function renderIntern(){
 
-}
+// }
 
-function renderEngineer(){
+// function renderEngineer(){
 
-}
+// }
 
 
-module.exports={
-    renderManager,
-    renderIntern,
-    renderEngineer, 
+// module.exports={
+//     renderManager,
+//     renderIntern,
+//     renderEngineer, 
    
-};
+// };
 
