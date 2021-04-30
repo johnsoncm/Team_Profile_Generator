@@ -20,6 +20,8 @@
         Node.js
         Inquirer
         Jest
+        HTML
+        CSS
 
 ## Installation
 
@@ -31,7 +33,7 @@
     I WANT to generate a webpage that displays my team's basic info
     SO THAT I have quick access to their emails and Github profiles
 
-## Acceptance Criteria
+## Accecptance Criteria
     GIVEN a command-line application that accepts user input
     WHEN I am prompted for my team members and their information
     THEN an HTML file is generated that displays a nicely formatted team roster based on user input
